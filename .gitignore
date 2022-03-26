@@ -1,0 +1,9 @@
+# intelij
+.idea
+
+# gradle
+.gradle
+
+# build folders
+out
+build
