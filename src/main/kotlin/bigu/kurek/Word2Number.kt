@@ -17,39 +17,40 @@ package bigu.kurek
  */
 class Word2Number {
 
-
-    private val letterToNumberMap = mapOf(
-        'l' to '1', // 1=L,T
-        't' to '1',
-        'n' to '2', // 2=N,Z,V
-        'ń' to '2',
-        'z' to '2',
-        'ż' to '2',
-        'ź' to '2',
-        'v' to '2',
-        'm' to '3', // 3=M,W
-        'w' to '3',
-        'k' to '4', // 4=K,R,X
-        'r' to '4',
-        'x' to '4',
-        's' to '5', // 5=S
-        'ś' to '5',
-        'g' to '6', // 6=G,J
-        'j' to '6',
-        'f' to '7', // 7=F
-        'ł' to '7',
-        'b' to '8', // 8=B
-        'p' to '9', // 9=P
-        'd' to '0', // 0=D,Q,C
-        'q' to '0',
-        'c' to '0',
-        'ć' to '0'
-    )
+    companion object {
+        private val LETTER_TO_NUMBER_MAP = mapOf(
+            'l' to '1', // 1=L,T
+            't' to '1',
+            'n' to '2', // 2=N,Z,V
+            'ń' to '2',
+            'z' to '2',
+            'ż' to '2',
+            'ź' to '2',
+            'v' to '2',
+            'm' to '3', // 3=M,W
+            'w' to '3',
+            'k' to '4', // 4=K,R,X
+            'r' to '4',
+            'x' to '4',
+            's' to '5', // 5=S
+            'ś' to '5',
+            'g' to '6', // 6=G,J
+            'j' to '6',
+            'f' to '7', // 7=F
+            'ł' to '7',
+            'b' to '8', // 8=B
+            'p' to '9', // 9=P
+            'd' to '0', // 0=D,Q,C
+            'q' to '0',
+            'c' to '0',
+            'ć' to '0'
+        )
+    }
 
     fun word2number(word: String): Int {
         val result = StringBuilder()
         for (t in prepareWord(word)) {
-            val digit = letterToNumberMap[t]
+            val digit = LETTER_TO_NUMBER_MAP[t]
             if (digit != null)
                 result.append(digit)
         }
@@ -59,7 +60,7 @@ class Word2Number {
     fun wordPrettify(word: String): String {
         val result = StringBuilder()
         word.lowercase().forEach { c ->
-            if (c in letterToNumberMap.keys) {
+            if (c in LETTER_TO_NUMBER_MAP.keys) {
                 result.append(c.uppercase())
             } else {
                 result.append(c)

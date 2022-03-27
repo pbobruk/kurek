@@ -4,8 +4,7 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 class Word2NumberTest extends Specification {
-
-
+    
     def "should convert word: '#word' to expectedNumber: '#expectedNumber'"() {
         def word2number = new Word2Number()
 
