@@ -4,8 +4,8 @@ Simple tool to convert numbers into words to make it easier to remember. It's us
 
 example:\
 `1410 - TuRLaĆ`\
-`7 - CiaŁa`
-`15 - LaS`\
+`7 - CiaŁa`\
+`15 - LaS`
 
 _TuRLaĆ (1410r) CiaŁa (7-lipiec) do LaSu (15) - bitwa pod Grunwaldem ;)_\
 
