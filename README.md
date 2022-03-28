@@ -4,10 +4,11 @@ Simple tool to convert numbers into words to make it easier to remember. It's us
 
 example:\
 `1410 - TuRLaĆ`\
-`7 - CiaŁa`\
+`07 - CiaŁa`\
 `15 - LaS`
 
-_TuRLaĆ (1410r) CiaŁa (7-lipiec) do LaSu (15) - bitwa pod Grunwaldem ;)_\
+_TuRLaĆ (1410r) CiaŁa (7-lipiec) do LaSu (15). - bitwa pod Grunwaldem ;)_\
+`1410.07.15`
 
 ## number to letter mapping
 
