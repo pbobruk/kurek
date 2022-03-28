@@ -3,10 +3,10 @@ package bigu.kurek
 import spock.lang.Specification
 import spock.lang.Unroll
 
-class Word2NumberTest extends Specification {
-    
+class Word2NumberConverterTest extends Specification {
+
     def "should convert word: '#word' to expectedNumber: '#expectedNumber'"() {
-        def word2number = new Word2Number()
+        def word2number = new Word2NumberConverter()
 
         expect:
         word2number.word2number(word) == expectedNumber
@@ -40,9 +40,22 @@ class Word2NumberTest extends Specification {
         "sZaDŹ"     | 202
     }
 
+
+    def "should convert word: '#word' to zero"() {
+        def word2number = new Word2NumberConverter()
+
+        expect:
+        word2number.word2number(word) == 0
+
+        where:
+        word  | _
+        "A"   | _
+        "AOE" | _
+    }
+
     @Unroll
     def "should prettify word: #word to #prettyWord"() {
-        def word2number = new Word2Number()
+        def word2number = new Word2NumberConverter()
 
         expect:
         word2number.wordPrettify(word) == prettyWord

@@ -15,7 +15,7 @@ package bigu.kurek
  * - Cz, Dz i Sz na początku liczą się jak Z!
  * - Słowo może się zaczynać z literki D np. DeLFiN=0172 czyli 172
  */
-class Word2Number {
+class Word2NumberConverter {
 
     companion object {
         private val LETTER_TO_NUMBER_MAP = mapOf(
@@ -54,7 +54,11 @@ class Word2Number {
             if (digit != null)
                 result.append(digit)
         }
-        return result.toString().toInt()
+        return try {
+            result.toString().toInt()
+        } catch (e: NumberFormatException) {
+            0
+        }
     }
 
     fun wordPrettify(word: String): String {
