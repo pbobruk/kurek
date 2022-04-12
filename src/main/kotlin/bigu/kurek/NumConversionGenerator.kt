@@ -3,7 +3,7 @@ package bigu.kurek
 import java.io.File
 
 class NumConversionGenerator {
-    val converter = Word2NumberConverter()
+    private val converter = Word2NumberConverter()
 
     companion object {
         val NUMS_TO_CONVERT_RANGE = 1..4000
