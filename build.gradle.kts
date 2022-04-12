@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.20")
 
     testImplementation("org.spockframework:spock-core:2.1-groovy-3.0")
     testImplementation("org.codehaus.groovy:groovy-all:3.0.10")
