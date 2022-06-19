@@ -11,10 +11,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.0")
 
     testImplementation("org.spockframework:spock-core:2.1-groovy-3.0")
-    testImplementation("org.codehaus.groovy:groovy-all:3.0.10")
+    testImplementation("org.codehaus.groovy:groovy-all:3.0.11")
 }
 
 tasks.getByName<Test>("test") {
