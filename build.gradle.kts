@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.7.20"
+    kotlin("jvm") version "1.8.10"
     groovy
 }
 
@@ -11,7 +11,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.7.20")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.8.10")
 
     testImplementation("org.spockframework:spock-core:2.3-groovy-3.0")
     testImplementation("org.codehaus.groovy:groovy-all:3.0.13")
@@ -22,6 +22,6 @@ tasks.getByName<Test>("test") {
 }
 
 tasks.wrapper {
-    gradleVersion = "7.5.1"
+    gradleVersion = "8.0.2"
     distributionType = Wrapper.DistributionType.ALL
 }
