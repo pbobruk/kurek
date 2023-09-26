@@ -43,3 +43,7 @@ Dictionary is a zip file, you can change the extension of the file to .zip and u
 ### convert polish LibreOffice dictionary
 
 `iconv -f ISO-8859-2 -t UTF-8 pl_PL.dic > pl_PL_libre_office_dic.txt`
+
+# Another method of learning dates
+
+https://historiawgdzieci.pl/podkast/daty-i-pamiec

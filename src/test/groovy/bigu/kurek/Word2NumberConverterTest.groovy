@@ -38,6 +38,9 @@ class Word2NumberConverterTest extends Specification {
         "KaPeĆ"     | 490
         "BaŃKa"     | 824
         "sZaDŹ"     | 202
+        "KoCheR"    | 404
+        "ceBuLa"    | 81
+        "ĆWiKŁa"    | 347
     }
 
 
@@ -70,5 +73,6 @@ class Word2NumberConverterTest extends Specification {
         "rzerzucha" | "RzeRzuCha"
         "zdzieleni" | "ZDzieLeNi"
         "czaszka"   | "cZaSzKa"
+        "ćwikła"    | "ĆWiKŁa"
     }
 }
