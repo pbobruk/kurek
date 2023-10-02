@@ -6,10 +6,8 @@ import spock.lang.Unroll
 class Word2NumberConverterTest extends Specification {
 
     def "should convert word: '#word' to expectedNumber: '#expectedNumber'"() {
-        def word2number = new Word2NumberConverter()
-
         expect:
-        word2number.word2number(word) == expectedNumber
+        Word2NumberConverter.STANDARD.word2number(word) == expectedNumber
 
         where:
         word        | expectedNumber
@@ -41,14 +39,12 @@ class Word2NumberConverterTest extends Specification {
         "KoCheR"    | 404
         "ceBuLa"    | 81
         "ĆWiKŁa"    | 347
+        "dZiaLKa"   | 214
     }
 
-
     def "should convert word: '#word' to zero"() {
-        def word2number = new Word2NumberConverter()
-
         expect:
-        word2number.word2number(word) == 0
+        Word2NumberConverter.STANDARD.word2number(word) == 0
 
         where:
         word  | _
@@ -58,10 +54,8 @@ class Word2NumberConverterTest extends Specification {
 
     @Unroll
     def "should prettify word: #word to #prettyWord"() {
-        def word2number = new Word2NumberConverter()
-
         expect:
-        word2number.wordPrettify(word) == prettyWord
+        Word2NumberConverter.STANDARD.wordPrettify(word) == prettyWord
 
         where:
         word        | prettyWord
@@ -74,5 +68,6 @@ class Word2NumberConverterTest extends Specification {
         "zdzieleni" | "ZDzieLeNi"
         "czaszka"   | "cZaSzKa"
         "ćwikła"    | "ĆWiKŁa"
+        "DZIALKA"   | "dZiaLKa"
     }
 }
