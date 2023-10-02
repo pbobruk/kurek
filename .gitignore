@@ -7,3 +7,6 @@
 # build folders
 out
 build
+
+#mac os
+.DS_Store
