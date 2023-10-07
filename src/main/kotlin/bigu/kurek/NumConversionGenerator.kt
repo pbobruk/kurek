@@ -60,4 +60,7 @@ fun main() {
     generator.generateConversion(Word2NumberConverter.V7, "/pl_PL_clean.txt", "results/pl_PL_result_v7.csv")
     generator.generateConversion(Word2NumberConverter.V7, "/en_GB_clean.txt", "results/en_GB_result_v7.csv")
 
+    generator.generateConversion(Word2NumberConverter.V8, "/pl_PL_clean.txt", "results/pl_PL_result_v8.csv")
+    generator.generateConversion(Word2NumberConverter.V8, "/en_GB_clean.txt", "results/en_GB_result_v8.csv")
+
 }
