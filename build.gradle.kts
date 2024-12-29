@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.21"
+    alias(libs.plugins.kotlin.jvm)
     groovy
 }
 
@@ -11,10 +11,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.21")
+    implementation(libs.bundles.kotlin)
 
-    testImplementation("org.spockframework:spock-core:2.4-M4-groovy-4.0")
-    testImplementation("org.apache.groovy:groovy-all:4.0.24")
+    testImplementation(libs.bundles.spock)
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.getByName<Test>("test") {
